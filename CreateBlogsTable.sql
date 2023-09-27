@@ -1,7 +1,7 @@
 CREATE TABLE blogs(
 	id INT,
-	entryCount INT,
 	authorId INT,
-	PRIMARY KEY(id),
+	content VARCHAR(MAX)
+	PRIMARY KEY(authorId, id),
 	FOREIGN KEY (authorId) REFERENCES author(id)
 );
